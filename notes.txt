@@ -102,6 +102,20 @@ Conceitos
 	  > segurar Ctrl
 	  > clicar no botão
 	  > arrastar para o item File's Owner
+
+	Visualizar conexões da View
+	  > xib
+	  > botão direito na View
+	  > obs: sempre desconectar antes de apagar view
+
+
+	Enviar Mensagem em Objective-C
+	[alvo seletor]
+
+
+	View = Tudo que está na tela
+	Action = Liga view ao código
+	Outlet = Liga código e view
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}

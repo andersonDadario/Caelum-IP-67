@@ -24,10 +24,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)mudarTexto:(id)sender{
+- (IBAction)mudarTexto:(id)sender{
     // Log é do dispositivo, e não do Xcode
     // @"minhaString" = NSString
     NSLog(@"Tocou no botão");
+    
+    // self.texto = Utilizar outlet
+    // enviar mensagem setText
+    // passar parâmetro (string)
+    //
+    // Açúcar sintático
+    // ou (dot notation)
+    //self.texto.text = @"Nice, Xamps";
+    // 
+    // [self.texto setText:@"Nice, Xamps"];
+    // ou
+    // [[self texto] setText:@"Nice, Xamps"];
+    
+    self.texto.text = self.campo.text;
 }
 
 @end

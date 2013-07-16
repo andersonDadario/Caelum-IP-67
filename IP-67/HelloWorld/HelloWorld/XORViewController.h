@@ -13,6 +13,15 @@
 // Leia XORViewController é UIViewController
 @interface XORViewController : UIViewController
 
+/* Property é basicamente um Getter e Setter
+ * strong|weak (aviso ao Reference Counter)
+ * nonatomic|atomic (sincronizar semáfaro)
+ * Outlet = Tomada
+ */
+@property(weak,nonatomic)IBOutlet UILabel*texto;
+
+// Campo de Texto
+@property(weak,nonatomic)IBOutlet UITextField*campo;
 
 /* Estrutura sinal(retorno)nomeDoMetodo:(tipoDoSender)sender;
  * {View que manda Mensagem sempre}
