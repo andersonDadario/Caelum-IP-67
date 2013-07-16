@@ -77,16 +77,36 @@ Enterprise
 	- 299/ano
 ----------------------------------------------
 Conceitos
+	Xcode = Integrated Development Environment (IDE)
+	- Editores (código e visual)
+	- Compilador
+	- Debugger
+	- Não é RAD (Rapid Application Development)
+
 	Toda View tem um Controller, por isso
 	se chama ViewController
 
 	.h (header) define
 	.m (messages) implementa
 	.xib (XML Interface Builder)
+	  .nib (NextStep Interface Builder)
+
+	[View] ---- [ View Controller ]
+	   |                 |
+	   |                 |
+	   ---[View]---------|
+
+
+	Ligar View com ViewController:
+	  > xib
+	  > segurar Ctrl
+	  > clicar no botão
+	  > arrastar para o item File's Owner
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
 	Build COMMAND+R
+	Log COMMAND+SHIFT+Y
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com

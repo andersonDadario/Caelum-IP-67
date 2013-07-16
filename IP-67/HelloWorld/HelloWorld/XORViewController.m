@@ -14,16 +14,20 @@
 
 @implementation XORViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)mudarTexto:(id)sender{
+    // Log é do dispositivo, e não do Xcode
+    // @"minhaString" = NSString
+    NSLog(@"Tocou no botão");
 }
 
 @end

@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+// @interface declara uma classe
+// O operador ":" significa Herança
+// Leia XORViewController é UIViewController
 @interface XORViewController : UIViewController
+
+
+/* Estrutura sinal(retorno)nomeDoMetodo:(tipoDoSender)sender;
+ * {View que manda Mensagem sempre}
+ * O caracter * significa referência
+ * Sinal + de Classe (Static)
+ * Sinal - de Instância
+ * id = NSObject *
+ */
+-(IBAction)mudarTexto:(id)sender;
 
 @end
