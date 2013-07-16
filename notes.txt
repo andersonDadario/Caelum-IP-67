@@ -1,0 +1,94 @@
+1970
+	Apple
+		I / IIe
+		Lisa / Macintosh (Primo pobre)
+		Next Step (Unix) ~> Mac OS 9 ~> BeOS
+			1983 - Stepstone(C+Smalltalk) = Objective C
+			Project Builder ~> Xcode
+			Interface Builder ~> Xcode
+	IBM PC OS/2 Presentation Manager (Windows 3.1)
+	Microsoft
+	Xerox Parc Alto
+		Mouse
+		GUI
+		Ethernet
+		Laser
+
+	Apple ~> Pepsi
+
+
+2007
+	Google Android
+	iPhone OS (adaptado do Mac OS)
+		Apps em HTML+CSS+JS
+
+2008
+	iPad
+	iPhone OS SDK
+	iOS = Único SO para dispositivos móveis
+
+----------------------------------------------
+iOS
+	iPhone (iPod)
+	iPad (mini)
+	Apple TV
+
+Universal (se vire para adaptar)
+
+----------------------------------------------
+malloc()/calloc()/realloc()
+free()
+
+	> Reference Counting
+	> Automatic Reference Counting
+		> em tempo de compilação
+		> coloca as mensagens Release (free)
+		> caso o programador esqueça
+
+----------------------------------------------
+iPhone Simulator
+	~> iOS usa binário ARM 7
+	~> simulador usa binário x86
+	~> Sem Camera
+	~> GPS limitado
+	~> Sem múltiplos toques
+----------------------------------------------
+Níveis de Conta Apple
+
+
+Grátis
+	- Download Xcode (última versão apenas)
+	- Vídeos antigos (Worldwide Developers Conference)
+Standard
+	- Conta PF ou PJ
+	- Download iOS beta
+	- Download Xcode (todas as versões)
+	- publicar app no iOS
+	- vídeos recentes de apresentações
+	- 100 dispositivos podem usar seus apps sem estarem na App Store
+		- Mesmo que você apague um device,
+		a contagem é atualizada apenas na
+		renovação da assinatura.
+	- 99/mês
+Enterprise
+	- mesmos benefícios da Standard (100 UDIDs tb)
+	- permite gerenciamento de desenvolvedores e autorização
+	- Ad-Hoc
+	- 299/ano
+----------------------------------------------
+Conceitos
+	Toda View tem um Controller, por isso
+	se chama ViewController
+
+	.h (header) define
+	.m (messages) implementa
+	.xib (XML Interface Builder)
+----------------------------------------------
+Atalhos
+	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
+	Build COMMAND+R
+----------------------------------------------
+Human Interface Guideline (HIG)
+developer.apple.com
+	/ios
+	/downloads
