@@ -115,12 +115,81 @@ Conceitos
 
 	View = Tudo que está na tela
 	Action = Liga view ao código
-	Outlet = Liga código e view
+	Outlet = Liga código à view
+
+	~
+	Não há construtor no Objective C
+	Existe o Init, um "construtor que tem que ser chamado manualmente"
+	str = [NSString alloc];
+	str = [str init];
+
+	// mas as pessoas esquecem de inicializar
+	str = [[NSString alloc] init];
+
+	// mas tem 1 atalho
+	// mas nao dá para passar parâmetros
+	str = [NSString new];
+
+	// por isso tem essa forma
+	str = [[NSString alloc] initWithCString:"Teste"];
+
+	// mas uma Factory
+	[NSString stringWithCString:"teste"];
+
+	~
+	Design Pattern
+	1. Resolve problema recorrente
+	2. Solução Padronizada
+	3. Nome // Para poupar ruídos
+	4. Dicas no Código // Para indicar o uso de um Design Pattern
+
+	~
+	Memória
+	Igual ao Java, com Pilha p/ variáveis com nome
+	E Heap para armazenar objetos
+	Para lembrar: quando se tem nome, é armazenada na Pilha;
+
+	Mandrakisse:
+	NSString*str1 = @"Teste";
+	NSString*str2 = @"Teste";
+	// Objective C cria 2 referências para um mesmo Objeto
+	// Para otimizar, mas se uma delas for alterada
+	// Outro objeto é criado e a respectiva referência é atualizada
+
+	~
+	Interpolação (Format String)
+	Não há concatenação no Objective C
+
+	// Há 3 strings abaixo (muitos objetos)
+	NSString*sql = @"Select *";
+	sql = [NSString stringWithFormat @"%@ from", sql];
+
+	// Alternativa (Mutable String)
+	// herda de NSString
+	// equivalente ao StringBuilder/StringBuffer no Java
+	NSMutableString*sql = [[NSMutableString alloc] init];
+	[sql appendString:@"select *"];
+	[sql appendFormat:@"%from %@",tabela];
+
+	// description == toString()
+	NSLog(@"comando sql: %@", [sql description]);
+
+	~
+	Mensagem VS Método
+	1. Mensagens renderizadas em tempo de execução
+
+	~
+	CAST
+	[moldar]
+	[gesso]
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
-	Build COMMAND+R
+	Gerar Build COMMAND+B
+	Executar Build COMMAND+R
 	Log COMMAND+SHIFT+Y
+	Mostrar Editor COMMAND+OPTIONS+ENTER
+	Repositório COMMAND+SHIFT+2
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com
