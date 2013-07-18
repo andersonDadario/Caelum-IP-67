@@ -233,6 +233,25 @@ Conceitos
 
 	Valor entre aspas duplas = verifica em sua classe
 	Valor entre "<" e ">"
+
+	~
+	Não há forma de forçar herança no Objective C
+	No NSObject há o método alloc
+
+	~
+	Modelar Objetos
+
+	1. O que é?
+		> Contato
+		> (herda de) Objeto
+	2. O que tem?
+		> nome
+		> telefone
+		> email
+		> endereço
+		> site
+	3. O que faz?
+		> description (toString)
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
