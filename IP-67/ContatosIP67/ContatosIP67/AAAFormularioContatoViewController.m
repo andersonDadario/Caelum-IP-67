@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Dadario. All rights reserved.
 //
 
+#import "AAAContato.h"
 #import "AAAFormularioContatoViewController.h"
 
 @interface AAAFormularioContatoViewController ()
@@ -37,14 +38,12 @@
 
 - (IBAction)pegaDadosFormulario:(id)sender {
     
-    NSMutableDictionary * contato = [[NSMutableDictionary alloc] init];
-    
-    [contato setObject:self.nome.text forKey:@"nome"];
-    // ou pode-se utilizar o Açúcar Sintático provido pelos Xcodes recentes
-    contato[@"telefone"] = self.telefone.text;
-    contato[@"email"] = self.email.text;
-    contato[@"endereco"] = self.endereco.text;
-    contato[@"site"] = self.site.text;
+    AAAContato * contato = [[AAAContato alloc] init];
+    contato.nome = self.nome.text;
+    contato.telefone = self.telefone.text;
+    contato.email = self.email.text;
+    contato.endereco = self.endereco.text;
+    contato.site = self.endereco.text;
     
     NSLog(@"Contato: %@", contato);
 }

@@ -10,14 +10,8 @@
 
 @implementation AAAContato
 
-/*
-@synthesize nome = _nome;
-
-// Example of manual setter
-
-- (void) setNome:(NSString *) umNome{
-    _nome = umNome;
+- (NSString*) description{
+    return [NSString stringWithFormat:@"%@ <%@>", self.nome, self.email];
 }
- */
 
 @end

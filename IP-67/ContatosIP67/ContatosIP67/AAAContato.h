@@ -8,26 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AAAContato : NSObject {
-    // iVar (opcional)
-    //NSString * _nome;
-}
+@interface AAAContato : NSObject
 
-/* Getter e Setter
- * Obs: automatic register the iVar in the class
- *
- * Opcoes
- *          copy
- *          unsafe_unretained (ARC nao verifica malloc(), alloc(), etc)
- *          retain (antes do ARC)
- *          strong
- *          weak
- *          assign (antes do ARC)
- *              default:assign 
- *
- *          atomic/nonatomic | default:atomic
- *         readonly
- */
 @property (strong) NSString * nome;
 @property (strong) NSString * telefone;
 @property (strong) NSString * email;
