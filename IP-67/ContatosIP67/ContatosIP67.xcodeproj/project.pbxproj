@@ -19,6 +19,7 @@
 		05DC1D4E1797537F0077DDCF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DC1D4D1797537F0077DDCF /* Default-568h@2x.png */; };
 		05DC1D58179753AB0077DDCF /* AAAFormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DC1D56179753AB0077DDCF /* AAAFormularioContatoViewController.m */; };
 		05DC1D59179753AB0077DDCF /* AAAFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */; };
+		05E4CB481798AB9500BA53A7 /* AAAListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		05DC1D55179753AB0077DDCF /* AAAFormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAFormularioContatoViewController.h; sourceTree = "<group>"; };
 		05DC1D56179753AB0077DDCF /* AAAFormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAFormularioContatoViewController.m; sourceTree = "<group>"; };
 		05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAAFormularioContatoViewController.xib; sourceTree = "<group>"; };
+		05E4CB461798AB9500BA53A7 /* AAAListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAListaContatoViewController.h; sourceTree = "<group>"; };
+		05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAListaContatoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				05DC1D55179753AB0077DDCF /* AAAFormularioContatoViewController.h */,
 				05DC1D56179753AB0077DDCF /* AAAFormularioContatoViewController.m */,
 				05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */,
+				05E4CB461798AB9500BA53A7 /* AAAListaContatoViewController.h */,
+				05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				05DC1D481797537F0077DDCF /* AAAAppDelegate.m in Sources */,
 				05DC1D58179753AB0077DDCF /* AAAFormularioContatoViewController.m in Sources */,
 				05BFA8CC17976C2A0072DE89 /* AAAContato.m in Sources */,
+				05E4CB481798AB9500BA53A7 /* AAAListaContatoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "AAAAppDelegate.h"
+#import "AAAListaContatoViewController.h"
 #import "AAAFormularioContatoViewController.h"
 
 @implementation AAAAppDelegate
@@ -15,8 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
-    self.window.rootViewController = form;
+    
+    AAAListaContatoViewController * lista = [[AAAListaContatoViewController alloc] init];
+    
+//    AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
+    self.window.rootViewController = lista;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
