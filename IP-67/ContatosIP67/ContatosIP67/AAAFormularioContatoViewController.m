@@ -15,6 +15,25 @@
 
 @implementation AAAFormularioContatoViewController
 
+- (id)init{
+    // Garantir que a cadeia de INITs
+    // Seja chamada
+    // Obs: self pode ser alterado apenas no init
+    self = [super init];
+    
+    // Custom init começa aqui
+    // 1) Validando se o self não é Nulo
+    // Porque pode dar algum toto nos inits acima
+    // 2) Nil tem o valor de 0
+    // Portanto, nao é necessário "self != nil"
+    if(self){
+        self.contatos = [[NSMutableArray alloc] init];
+    }
+    
+    // Retornar o próprio objeto
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -57,6 +76,24 @@
     contato.endereco = self.endereco.text;
     contato.site = self.endereco.text;
     
+    [self.contatos addObject: contato];
+    // removeObject
+    // objectAtIndex 0
+    // indexOfObject
+    // self.contato[0]
+    
+    // Gravar no Log
+    NSLog(@"Contato: %@", contato);
+    NSLog(@"Quantidade: %d\nContatos: %@"
+          , [self.contatos count]
+          , self.contatos
+    );
+    
+    for(AAAContato *c in self.contatos){
+        NSLog(@"Iterando: %@", c);
+    }
+
+    
     // Desabilitar Teclado
     //
     // Como se fosse o Blur()
@@ -64,7 +101,5 @@
     //
     // Pedir para a view aniquilar o teclado
     [self.view endEditing:YES];
-    
-    NSLog(@"Contato: %@", contato);
 }
 @end

@@ -10,6 +10,8 @@
 
 @interface AAAFormularioContatoViewController : UIViewController
 
+@property (strong, atomic) NSMutableArray *contatos;
+
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
 @property (weak, nonatomic) IBOutlet UITextField *email;
