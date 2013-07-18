@@ -10,17 +10,14 @@
 
 @implementation AAAContato
 
-    // Getter e Setter manual
+/*
+@synthesize nome = _nome;
 
-    - (void)setNome:(NSString*) umNome {
-        // self.nome => loop infinito
-        // pois "self.nome =" chama o setter
-        nome = umNome;
-    }
-    
-    - (NSString*) nome{
-        return nome;
-    }
-    
+// Example of manual setter
+
+- (void) setNome:(NSString *) umNome{
+    _nome = umNome;
+}
+ */
 
 @end

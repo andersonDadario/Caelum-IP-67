@@ -9,12 +9,29 @@
 #import <Foundation/Foundation.h>
 
 @interface AAAContato : NSObject {
-    // Variável de instância no Objective C
-    // Sempre é Privada
-    NSString * nome;
+    // iVar (opcional)
+    //NSString * _nome;
 }
 
-- (void) setNome:(NSString*) nome;
-- (NSString*) nome;
+/* Getter e Setter
+ * Obs: automatic register the iVar in the class
+ *
+ * Opcoes
+ *          copy
+ *          unsafe_unretained (ARC nao verifica malloc(), alloc(), etc)
+ *          retain (antes do ARC)
+ *          strong
+ *          weak
+ *          assign (antes do ARC)
+ *              default:assign 
+ *
+ *          atomic/nonatomic | default:atomic
+ *         readonly
+ */
+@property (strong) NSString * nome;
+@property (strong) NSString * telefone;
+@property (strong) NSString * email;
+@property (strong) NSString * endereco;
+@property (strong) NSString * site;
 
 @end

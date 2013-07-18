@@ -252,6 +252,15 @@ Conceitos
 		> site
 	3. O que faz?
 		> description (toString)
+
+
+	~
+	Truques da Herança e Polimorfismo
+
+	// NSString *nome;
+	contato.nome = [[NSMutableString alloc] init];
+	// Mutable String altera a NSString
+
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
