@@ -19,8 +19,10 @@
     
     AAAListaContatoViewController * lista = [[AAAListaContatoViewController alloc] init];
     
+    UINavigationController * nav =[[UINavigationController alloc] initWithRootViewController:lista];
+    
 //    AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
-    self.window.rootViewController = lista;
+    self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
