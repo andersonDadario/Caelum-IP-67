@@ -201,7 +201,9 @@ Conceitos
           |             |
 	  |             | (2) main()
           |             | (3) 
-         (4)-------[AppDelegate]--(5)--[View]
+         (4)-------[AppDelegate]--(5)--[View]--[N views]
+
+	Lembra que tudo na tela é uma view? (botão, label, etc)
 
 	~
 	Push Notification
@@ -261,6 +263,10 @@ Conceitos
 	contato.nome = [[NSMutableString alloc] init];
 	// Mutable String altera a NSString
 
+
+	~
+	nil = null
+	Mensagens para nil são ignoradas
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
@@ -275,3 +281,5 @@ Human Interface Guideline (HIG)
 developer.apple.com
 	/ios
 	/downloads
+Cocopods (like a Maven)
+Google Group [self SP]

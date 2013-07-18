@@ -36,6 +36,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)ReturnAction:(UITextField *)sender {
+    UIResponder * nextView = [self.view viewWithTag:sender.tag+1];
+    
+    if(nextView){
+        // aperta botão Gravar
+        [self pegaDadosFormulario:nil];
+    } else {
+        // dá foco na próxima View
+        [nextView becomeFirstResponder];
+    }
+}
+
 - (IBAction)pegaDadosFormulario:(id)sender {
     
     AAAContato * contato = [[AAAContato alloc] init];
@@ -44,6 +56,14 @@
     contato.email = self.email.text;
     contato.endereco = self.endereco.text;
     contato.site = self.endereco.text;
+    
+    // Desabilitar Teclado
+    //
+    // Como se fosse o Blur()
+    // [self.site resignFirstResponder];
+    //
+    // Pedir para a view aniquilar o teclado
+    [self.view endEditing:YES];
     
     NSLog(@"Contato: %@", contato);
 }

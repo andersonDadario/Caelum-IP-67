@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
+- (IBAction)ReturnAction:(UITextField *)sender;
 
 - (IBAction)pegaDadosFormulario:(id)sender;
 
