@@ -182,6 +182,57 @@ Conceitos
 	CAST
 	[moldar]
 	[gesso]
+
+	~
+	Novo App (Empty Project)
+
+	Supporting Files > pch (pre compiled headers)
+	podem ser usados em qualquer fonte
+
+	~
+	Preâmbulo do App
+	1) iOS carrega APP
+	2) APP chama main()
+	3) main() chama AppDelegate
+	4) iOS interage diretamente com o AppDelegate
+	5) Mostrar View
+
+	[iOS]---(1)---[App]
+          |             |
+	  |             | (2) main()
+          |             | (3) 
+         (4)-------[AppDelegate]--(5)--[View]
+
+	~
+	Push Notification
+	- Vem do servidor da Apple
+	- App tem 5 segundos para tomar ação
+	- App não é iniciado até o usuário tocar
+
+
+	~
+	Entender método
+
+	public boolean applicationDidFinishLaunchingWithOptions (UIApplication application, Map launchOptions)
+
+	- (BOOL) application (UIApplication *) application didFinishLaunchingWithOptions (NSDictionary *) launchOptions
+		> recebe 2 parâmetros
+			> (UIApplication *) application
+			> (NSDictionary *) launchOptions
+		> nome do método: application:DidFinishLaunchingWithOptions:
+
+	[alvo seletor]
+	[alvo application:x didFinishLaunchingWithOptions:y]
+	// Parâmetros mais legível
+
+	~
+	Include VS Import
+
+	include = require
+	import = require_once
+
+	Valor entre aspas duplas = verifica em sua classe
+	Valor entre "<" e ">"
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
@@ -190,6 +241,7 @@ Atalhos
 	Log COMMAND+SHIFT+Y
 	Mostrar Editor COMMAND+OPTIONS+ENTER
 	Repositório COMMAND+SHIFT+2
+	Novo item COMMAND+N
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com
