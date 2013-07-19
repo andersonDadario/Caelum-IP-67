@@ -272,6 +272,17 @@ Conceitos
 	Injeção de Dependências (IoC)
 	App Delegate --> setContatos --> Lista Contatos
 		--> setContatos --> contatos
+
+	~
+	Ciclo de vida das Views
+
+	- init ) 1
+	- viewDidLoad ) 1
+	- viewWillAppear ) X
+	- viewDidAppear ) X
+	- viewWillDisappear ) X
+	- ViewDidDisappear ) X
+	- dealloc ) 1
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
