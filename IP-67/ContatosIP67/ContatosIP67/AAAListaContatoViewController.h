@@ -10,4 +10,6 @@
 
 @interface AAAListaContatoViewController : UITableViewController
 
+@property (weak, atomic) NSMutableArray *contatos;
+
 @end

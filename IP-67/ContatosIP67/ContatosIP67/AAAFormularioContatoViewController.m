@@ -27,17 +27,26 @@
     // 2) Nil tem o valor de 0
     // Portanto, nao é necessário "self != nil"
     if(self){
+        // Titulo
         self.navigationItem.title = @"Cadastro";
+        
+        // Botao Voltar
         UIBarButtonItem * btnVoltar = [[UIBarButtonItem alloc]
                 initWithTitle:@"Cancelar"
                 style:(UIBarButtonItemStylePlain)
                 target:self
                 action:@selector(escondeFormulario)
         ];
-        
         self.navigationItem.leftBarButtonItem = btnVoltar;
         
-        self.contatos = [[NSMutableArray alloc] init];
+        // Botao Add
+        UIBarButtonItem * btnAdd = [[UIBarButtonItem alloc]
+               initWithTitle:@"Add"
+               style:(UIBarButtonItemStylePlain)
+               target:self
+               action:@selector(criaContato)
+        ];
+        self.navigationItem.rightBarButtonItem = btnAdd;
     }
     
     // Retornar o próprio objeto
@@ -46,6 +55,27 @@
 
 - (void)escondeFormulario{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) criaContato{
+    AAAContato * contato = [self pegaDadosFormulario];
+
+    // Adicionar na Lista
+    [self.contatos addObject:contato];
+
+    // Gravar no Log
+    NSLog(@"Contato: %@", contato);
+    NSLog(@"Quantidade: %d\nContatos: %@"
+          , [self.contatos count]
+          , self.contatos
+    );
+    
+    for(AAAContato *c in self.contatos){
+        NSLog(@"Iterando: %@", c);
+    }
+    
+    // Esconde Formulario
+    [self escondeFormulario];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -74,15 +104,14 @@
     
     if(nextView){
         // aperta botão Gravar
-        [self pegaDadosFormulario:nil];
+        //[self pegaDadosFormulario:nil];
     } else {
         // dá foco na próxima View
         [nextView becomeFirstResponder];
     }
 }
 
-- (IBAction)pegaDadosFormulario:(id)sender {
-    
+- (AAAContato*)pegaDadosFormulario {
     AAAContato * contato = [[AAAContato alloc] init];
     contato.nome = self.nome.text;
     contato.telefone = self.telefone.text;
@@ -90,30 +119,6 @@
     contato.endereco = self.endereco.text;
     contato.site = self.endereco.text;
     
-    [self.contatos addObject: contato];
-    // removeObject
-    // objectAtIndex 0
-    // indexOfObject
-    // self.contato[0]
-    
-    // Gravar no Log
-    NSLog(@"Contato: %@", contato);
-    NSLog(@"Quantidade: %d\nContatos: %@"
-          , [self.contatos count]
-          , self.contatos
-    );
-    
-    for(AAAContato *c in self.contatos){
-        NSLog(@"Iterando: %@", c);
-    }
-
-    
-    // Desabilitar Teclado
-    //
-    // Como se fosse o Blur()
-    // [self.site resignFirstResponder];
-    //
-    // Pedir para a view aniquilar o teclado
-    [self.view endEditing:YES];
+    return contato;
 }
 @end

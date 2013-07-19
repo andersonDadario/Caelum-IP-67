@@ -17,15 +17,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    AAAListaContatoViewController * lista = [[AAAListaContatoViewController alloc] init];
+    // Injeção de Dependências
+    self.contatos = [[NSMutableArray alloc] init];
     
+    // Lista
+    AAAListaContatoViewController * lista = [[AAAListaContatoViewController alloc] init];
+    lista.contatos = self.contatos;
+    
+    // Lista -> Nav
     UINavigationController * nav =[[UINavigationController alloc] initWithRootViewController:lista];
     
-//    AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
     self.window.rootViewController = nav;
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

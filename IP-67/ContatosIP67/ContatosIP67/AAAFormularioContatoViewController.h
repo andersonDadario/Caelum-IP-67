@@ -10,7 +10,7 @@
 
 @interface AAAFormularioContatoViewController : UIViewController
 
-@property (strong, atomic) NSMutableArray *contatos;
+@property (weak, atomic) NSMutableArray *contatos;
 
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
-- (IBAction)ReturnAction:(UITextField *)sender;
 
-- (IBAction)pegaDadosFormulario:(id)sender;
+
+- (IBAction)ReturnAction:(UITextField *)sender;
 
 @end

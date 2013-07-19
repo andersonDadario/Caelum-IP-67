@@ -37,6 +37,7 @@
 - (void)exibeFormulario{
     // Carregar Form
     AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
+    form.contatos = self.contatos;
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:form];
     
     // Enviar mensagem para mesma view

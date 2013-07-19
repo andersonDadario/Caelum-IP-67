@@ -267,6 +267,11 @@ Conceitos
 	~
 	nil = null
 	Mensagens para nil são ignoradas
+
+	~
+	Injeção de Dependências (IoC)
+	App Delegate --> setContatos --> Lista Contatos
+		--> setContatos --> contatos
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
