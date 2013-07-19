@@ -27,11 +27,25 @@
     // 2) Nil tem o valor de 0
     // Portanto, nao é necessário "self != nil"
     if(self){
+        self.navigationItem.title = @"Cadastro";
+        UIBarButtonItem * btnVoltar = [[UIBarButtonItem alloc]
+                initWithTitle:@"Cancelar"
+                style:(UIBarButtonItemStylePlain)
+                target:self
+                action:@selector(escondeFormulario)
+        ];
+        
+        self.navigationItem.leftBarButtonItem = btnVoltar;
+        
         self.contatos = [[NSMutableArray alloc] init];
     }
     
     // Retornar o próprio objeto
     return self;
+}
+
+- (void)escondeFormulario{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
