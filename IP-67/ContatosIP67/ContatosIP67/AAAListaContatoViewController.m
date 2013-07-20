@@ -41,6 +41,17 @@
     [self.tableView reloadData];
 }
 
+- (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    // 1) Armazenar referência do contato
+    AAAContato * c = self.contatos[sourceIndexPath.row];
+    
+    // 2) Apagar contato do array
+    [self.contatos removeObjectAtIndex:sourceIndexPath.row];
+    
+    // 3) Inserir referência do contato na nova posição
+    [self.contatos insertObject:c atIndex:destinationIndexPath.row];
+}
+
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     // Apenas Exclusão
     if(editingStyle == UITableViewCellEditingStyleDelete){
