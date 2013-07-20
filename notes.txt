@@ -317,7 +317,7 @@ Conceitos
 	1) Cocoa Touch
 	2) Media Layer
 	3) Core Services
-	4) Core
+	4) Core OS
 
 	Operações Permitidas caso a App vá para Backaground
 	- VoIP
@@ -325,6 +325,14 @@ Conceitos
 	- Download
 	  > NewSStand
 	- Audio
+
+	Arquivos do Simulador:
+	~/Library/Application Support/iPhone Simulator/6.1/Applications/
+
+	~
+	Organizar Massive View Controller (MVC)
+	#pragma mark -
+	#pragma mark Ciclo de Vida
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
@@ -334,6 +342,12 @@ Atalhos
 	Mostrar Editor COMMAND+OPTIONS+ENTER
 	Repositório COMMAND+SHIFT+2
 	Novo item COMMAND+N
+
+	Tab
+	COMMAND + T
+	COMMAND + W
+	COMMAND + {
+	COMMAND + }
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com

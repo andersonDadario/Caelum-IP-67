@@ -36,9 +36,17 @@
     
     return self;
 }
-
+#pragma mark -
+#pragma mark Ciclo de Vida
 - (void) viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
+}
+
+#pragma mark -
+#pragma mark Actions da View
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AAAContato * contato = self.contatos[indexPath.row];
+    NSLog(@"Contato selecionado: %@",contato);
 }
 
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
@@ -76,6 +84,9 @@
     }
 }
 
+#pragma mark -
+#pragma mark Interação com o Formulário
+
 - (void)exibeFormulario{
     // Carregar Form
     AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
@@ -87,6 +98,8 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
+#pragma mark -
+#pragma mark Metodos da UITableView
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
