@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AAAContato : NSObject
+@interface AAAContato : NSObject <NSCoding>
 
 @property (strong) NSString * nome;
 @property (strong) NSString * telefone;

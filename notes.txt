@@ -283,6 +283,48 @@ Conceitos
 	- viewWillDisappear ) X
 	- ViewDidDisappear ) X
 	- dealloc ) 1
+
+	~
+	Serialização
+	- NSKeyedArchiver e NSKeyedUnarchiever
+
+	[NSKeyedArchiver] ----- (encode) --> NSMutableArray
+						  | 
+						  | 
+					       (encode)
+						  | 
+						  v
+						Contato
+						  | 
+						  | 
+					       (encode)
+						  | 
+						  v 
+					       NSString 
+
+
+	~
+	Interface é chamada de Protocolo no Objective C
+	@interface Contato:NSObject <NSCoding,Blabla (…)>
+
+
+	~
+	Permissões Filesystem
+	> Ler na pasta do App
+	> Ler/Escrever na pasta App/Documents
+	NSArray * dirs = NSSearchPathForDirectoriesInDomains:(NSDocumentDirectory *)dir
+
+	1) Cocoa Touch
+	2) Media Layer
+	3) Core Services
+	4) Core
+
+	Operações Permitidas caso a App vá para Backaground
+	- VoIP
+	- GPS
+	- Download
+	  > NewSStand
+	- Audio
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}

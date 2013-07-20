@@ -15,4 +15,6 @@
 
 @property (strong, atomic) NSMutableArray *contatos;
 
+@property (strong, atomic) NSString *nomeArquivo;
+
 @end
