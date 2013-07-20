@@ -19,7 +19,9 @@
         // Título da barra
         self.navigationItem.title = @"Contatos";
         
-        // Botões
+        // Botões       
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
         UIBarButtonItem * btn = [
                 [UIBarButtonItem alloc]
                                  
@@ -37,6 +39,30 @@
 
 - (void) viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    // Apenas Exclusão
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        // 1) Remover do Array
+        [self.contatos removeObjectAtIndex:indexPath.row];
+        
+        /* 2) Remover a Linha
+         * 2.1) Recarregar todas as linhas
+         *      [self.tableView  reloadData];
+         * 2.2) Remover linha específica
+         *
+         * (Modo Feio)
+         * [tableView deleteRowsAtIndexPaths:[[NSArray alloc] initWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationFade];
+         * 
+         * (Modo Bonito) { com açúcar sintático para arrays }
+         * Lembrando que para dicionários é @{}
+         */
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        
+    }
 }
 
 - (void)exibeFormulario{
