@@ -304,7 +304,7 @@ Conceitos
 
 
 	~
-	Interface é chamada de Protocolo no Objective C
+	Interface é chamada de Protocolo no Objective C (@protocol)
 	@interface Contato:NSObject <NSCoding,Blabla (…)>
 
 
@@ -333,6 +333,39 @@ Conceitos
 	Organizar Massive View Controller (MVC)
 	#pragma mark -
 	#pragma mark Ciclo de Vida
+
+	~
+	i18n (chamado de Localização)
+	- traduzir xib
+	- traduzir imagem
+	- traduzir strings
+
+	~
+	Modal VS Push
+
+	Push empurra view para fora da tela
+	Antônimo = Pop
+
+	~
+	Custom Init
+	[[FormVC alloc] initWithContato:contato]
+	Vantagem: localizar Callers!
+
+	~
+	Data Source = tela
+	Delegate = eventos
+
+	~
+	App Busao SP
+
+	~
+	Delegate manda fazer e pega de volta
+	FormControllerDelegate
+
+	~ ASLR
+	~ Cookie Web View
+	~ OAuth mobile
+	~ Conf WebView
 ----------------------------------------------
 Atalhos
 	Aba Direita COMMAND+OPTIONS+{0,1,2,3,4,..}
@@ -348,6 +381,8 @@ Atalhos
 	COMMAND + W
 	COMMAND + {
 	COMMAND + }
+
+	SHIFT+COMMAND+O Buscar Classes
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com

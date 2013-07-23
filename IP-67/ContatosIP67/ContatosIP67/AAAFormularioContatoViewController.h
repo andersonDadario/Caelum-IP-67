@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AAAContato.h"
 
 @interface AAAFormularioContatoViewController : UIViewController
 
@@ -18,8 +19,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
+@property (weak, atomic) AAAContato *_contato;
 
-
+- (id) initWithContato:(AAAContato *) contato;
 - (IBAction)ReturnAction:(UITextField *)sender;
 
 @end
+

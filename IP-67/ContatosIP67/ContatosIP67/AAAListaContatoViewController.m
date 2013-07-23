@@ -22,12 +22,14 @@
         // Botões       
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
         
+        
         UIBarButtonItem * btn = [
                 [UIBarButtonItem alloc]
                                  
                     initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd)
                     target:self
-                    action:@selector(exibeFormulario)
+                    action:@selector(exibeFormularioEmBranco)
+                                 
         ];
         
         self.navigationItem.rightBarButtonItem = btn;
@@ -45,8 +47,7 @@
 #pragma mark -
 #pragma mark Actions da View
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    AAAContato * contato = self.contatos[indexPath.row];
-    NSLog(@"Contato selecionado: %@",contato);
+    [self exibeFormulario:indexPath];
 }
 
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
@@ -86,16 +87,27 @@
 
 #pragma mark -
 #pragma mark Interação com o Formulário
+- (void)exibeFormularioEmBranco{
+    [self exibeFormulario:nil];
+}
 
-- (void)exibeFormulario{
-    // Carregar Form
-    AAAFormularioContatoViewController * form = [[AAAFormularioContatoViewController alloc] init];
-    form.contatos = self.contatos;
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:form];
+- (void)exibeFormulario:(NSIndexPath *)indexPath{
+    AAAFormularioContatoViewController *form = nil;
     
-    // Enviar mensagem para mesma view
-    // Para iniciar a janela Modal
-    [self presentViewController:nav animated:YES completion:nil];
+    // Busca Contato (se tiver)
+    // Carrega Form
+    if(indexPath){
+        AAAContato *contato = self.contatos[indexPath.row];
+        form = [[AAAFormularioContatoViewController alloc] initWithContato:contato];
+    } else {
+        form = [[AAAFormularioContatoViewController alloc] init];
+    }
+    
+    // Passa contatos para o form
+    form.contatos = self.contatos;
+    
+    // Empurra View
+    [self.navigationController pushViewController:form animated:YES];
 }
 
 #pragma mark -

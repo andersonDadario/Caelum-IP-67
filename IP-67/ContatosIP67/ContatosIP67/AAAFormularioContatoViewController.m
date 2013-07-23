@@ -53,8 +53,19 @@
     return self;
 }
 
+- (id) initWithContato:(AAAContato *)contato{
+    self = [self init];
+    if(self){
+        self._contato = contato;
+    }
+    
+    return self;
+}
+
 - (void)escondeFormulario{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //[self.navigationController popToViewController:<#(UIViewController *)#> animated:<#(BOOL)#>]
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) criaContato{
@@ -74,7 +85,6 @@
         NSLog(@"Iterando: %@", c);
     }
     
-    
     // Esconde Formulario
     [self escondeFormulario];
 }
@@ -92,6 +102,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if(self._contato){
+        self.nome.text = self._contato.nome;
+        self.telefone.text = self._contato.telefone;
+        self.email.text = self._contato.email;
+        self.endereco.text = self._contato.endereco;
+        self.site.text = self._contato.site;
+    }
 }
 
 - (void)didReceiveMemoryWarning
