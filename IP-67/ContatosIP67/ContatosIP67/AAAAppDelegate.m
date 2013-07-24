@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Dadario. All rights reserved.
 //
 
+#import "NSString+Marota.h"
+#import "UIViewController+comBarrinha.h"
 #import "AAAAppDelegate.h"
 #import "AAAListaContatoViewController.h"
 #import "AAAFormularioContatoViewController.h"
@@ -14,6 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [@"OI" maroto];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -32,9 +37,12 @@
     lista.contatos = self.contatos;
     
     // Lista -> Nav
-    UINavigationController * nav =[[UINavigationController alloc] initWithRootViewController:lista];
+    // (antes)
+    //UINavigationController * nav =[[UINavigationController alloc] initWithRootViewController:lista];
+    // (depois)
+    //[lista comBarrinha]
     
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [lista comBarrinha];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

@@ -109,6 +109,10 @@
         self.endereco.text = self._contato.endereco;
         self.site.text = self._contato.site;
     }
+    
+    //UIButton * botao = [UIButton new];
+    //UITapGestureRecognizer * reco = [[UITapGestureRecognizer alloc] initWithTarget:self action:<#(SEL)#>]
+    //botao.addG
 }
 
 - (void)didReceiveMemoryWarning

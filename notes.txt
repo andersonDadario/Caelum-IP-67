@@ -362,6 +362,73 @@ Conceitos
 	Delegate manda fazer e pega de volta
 	FormControllerDelegate
 
+	~
+	Factory
+	NSString stringWithFormat
+	NSIndexPath indexPathForRow
+
+	~
+	Core Graphics Rect (CGRect)
+
+	~
+	init > tela não está pronta
+	viewDidLoad > executa 1x
+	viewDidAppear > executa sempre
+
+	~
+	[super initWithStyle:UITableView...
+
+	~
+	Clique longo (2 momentos)
+	> inicio
+	> fim
+
+	Final de lista (Objective C)
+	@"Ligar", nil
+	> passar nil
+
+	~
+	C é mais rápido que Objective C
+	> Só é necessário o uso de "*"
+	>> para variáveis que referenciem um objeto
+	>> que herda de NSObject
+	>>> CGPoint = struct do C
+	>>> (Android = Float[])
+
+	~
+	CGPoint recebe View e por coordenadas X/Y
+	Consegue retornar um IndexPath
+
+	~
+	ponto.x += 3
+	Não altera o objeto
+	ponto.x está na Pilha e não Heap
+
+	~
+	ActionSheet
+	> menu modal
+	> canto inferior
+
+	~
+	Acessar APP e APPDelegate
+	[UIApplication sharedApplication]
+	[[UIApplication sharedApplication] delegate]
+
+	// Máscara de Bits (tel:, sms:, http:)
+	NSString url = [NSString stringWithFormat:@"tel:%@", self.contato]
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]]
+
+	~
+	Qualificação Objective C
+	> Objective C Category
+	>> Marota
+	>> NSString
+
+	~
+	Email
+	MFMailComposerViewController
+	>> Validar se o usuário possui conta de e-mail cadastrada
+
 	~ ASLR
 	~ Cookie Web View
 	~ OAuth mobile
@@ -383,6 +450,7 @@ Atalhos
 	COMMAND + }
 
 	SHIFT+COMMAND+O Buscar Classes
+	ESC ou Ctrl + Espaço
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com
@@ -390,3 +458,9 @@ developer.apple.com
 	/downloads
 Cocopods (like a Maven)
 Google Group [self SP]
+iOS Table Views
+App Busao SP
+http://raywenderlich.com
+Effective Objective C
+Learn Cocoa Touch for iOS
+Beginning iOS Game Development

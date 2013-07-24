@@ -19,6 +19,8 @@
 		05DC1D4E1797537F0077DDCF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DC1D4D1797537F0077DDCF /* Default-568h@2x.png */; };
 		05DC1D58179753AB0077DDCF /* AAAFormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DC1D56179753AB0077DDCF /* AAAFormularioContatoViewController.m */; };
 		05DC1D59179753AB0077DDCF /* AAAFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */; };
+		05DF2856179F625C0009CB46 /* NSString+Marota.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF2855179F625C0009CB46 /* NSString+Marota.m */; };
+		05DF2859179F650D0009CB46 /* UIViewController+comBarrinha.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */; };
 		05E4CB481798AB9500BA53A7 /* AAAListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,10 @@
 		05DC1D55179753AB0077DDCF /* AAAFormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAFormularioContatoViewController.h; sourceTree = "<group>"; };
 		05DC1D56179753AB0077DDCF /* AAAFormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAFormularioContatoViewController.m; sourceTree = "<group>"; };
 		05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAAFormularioContatoViewController.xib; sourceTree = "<group>"; };
+		05DF2854179F625C0009CB46 /* NSString+Marota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Marota.h"; sourceTree = "<group>"; };
+		05DF2855179F625C0009CB46 /* NSString+Marota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Marota.m"; sourceTree = "<group>"; };
+		05DF2857179F650D0009CB46 /* UIViewController+comBarrinha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+comBarrinha.h"; sourceTree = "<group>"; };
+		05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+comBarrinha.m"; sourceTree = "<group>"; };
 		05E4CB461798AB9500BA53A7 /* AAAListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAListaContatoViewController.h; sourceTree = "<group>"; };
 		05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAListaContatoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +116,10 @@
 		05DC1D3E1797537F0077DDCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05DF2857179F650D0009CB46 /* UIViewController+comBarrinha.h */,
+				05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */,
+				05DF2854179F625C0009CB46 /* NSString+Marota.h */,
+				05DF2855179F625C0009CB46 /* NSString+Marota.m */,
 				05DC1D3F1797537F0077DDCF /* ContatosIP67-Info.plist */,
 				05DC1D401797537F0077DDCF /* InfoPlist.strings */,
 				05DC1D431797537F0077DDCF /* main.m */,
@@ -205,6 +215,8 @@
 				05DC1D58179753AB0077DDCF /* AAAFormularioContatoViewController.m in Sources */,
 				05BFA8CC17976C2A0072DE89 /* AAAContato.m in Sources */,
 				05E4CB481798AB9500BA53A7 /* AAAListaContatoViewController.m in Sources */,
+				05DF2856179F625C0009CB46 /* NSString+Marota.m in Sources */,
+				05DF2859179F650D0009CB46 /* UIViewController+comBarrinha.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
