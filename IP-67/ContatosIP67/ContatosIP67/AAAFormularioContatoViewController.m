@@ -38,14 +38,16 @@
                 action:@selector(escondeFormulario)
         ];
         self.navigationItem.leftBarButtonItem = btnVoltar;
-        
+    
         // Botao Add
-        UIBarButtonItem * btnAdd = [[UIBarButtonItem alloc]
-               initWithTitle:@"Add"
-               style:(UIBarButtonItemStylePlain)
-               target:self
-               action:@selector(criaContato)
+        UIBarButtonItem * btnAdd = [
+            [UIBarButtonItem alloc]
+                initWithTitle:@"Add"
+                style:(UIBarButtonItemStylePlain)
+                target:self
+                action:@selector(criaContato)
         ];
+        
         self.navigationItem.rightBarButtonItem = btnAdd;
     }
     
@@ -57,6 +59,17 @@
     self = [self init];
     if(self){
         self._contato = contato;
+        
+        // Botao Confirmar
+        UIBarButtonItem * btnConfirmar = [
+            [UIBarButtonItem alloc]
+            initWithTitle:@"Confirmar"
+            style:(UIBarButtonItemStylePlain)
+            target:self
+            action:@selector(atualizaContato)
+        ];
+
+        self.navigationItem.rightBarButtonItem = btnConfirmar;
     }
     
     return self;
@@ -66,6 +79,11 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     //[self.navigationController popToViewController:<#(UIViewController *)#> animated:<#(BOOL)#>]
     //[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) atualizaContato{
+    [self pegaDadosFormulario];
+    [self escondeFormulario];
 }
 
 - (void) criaContato{
@@ -134,7 +152,14 @@
 }
 
 - (AAAContato*)pegaDadosFormulario {
-    AAAContato * contato = [[AAAContato alloc] init];
+    AAAContato * contato = nil;
+    
+    if(self._contato){
+        contato = self._contato;
+    } else {
+        contato = [[AAAContato alloc] init];
+    }
+    
     contato.nome = self.nome.text;
     contato.telefone = self.telefone.text;
     contato.email = self.email.text;

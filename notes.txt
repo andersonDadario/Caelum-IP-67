@@ -429,6 +429,33 @@ Conceitos
 	MFMailComposerViewController
 	>> Validar se o usuário possui conta de e-mail cadastrada
 
+	~
+	UIImaginePickerController
+	>> tirar foto OU escolher da biblioteca
+	1) Verificar se há uma Câmera
+	if(
+		[
+			UIImagePickerController 
+		isServiceTypeAvailable:UIImagePickerControllerSourceTypeCamera
+		]
+	)
+	>>> UIImagePickerController * picker = [UIImagePickerController new];
+	>>> picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	>>> picker.sourceType = UIImagePickerControllerSourcePhotoLibrary;
+	>>> picker.allowsEditing = YES;
+	>>> picker delegate = self;
+	>>> [self presentViewController:picker animated:YES completion:nil];
+	>>>>> COMMAND + SHIFT + O
+	>>>>> UIImagePickerController
+	>>>>> @property delegate
+	>>>>> <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+	>>>>> [self dismissViewControllerAnimated:YES completion:nil];
+
+	~
+	[self presentViewController.picker animated:YES completion:^{
+		callback code
+	}];
+
 	~ ASLR
 	~ Cookie Web View
 	~ OAuth mobile
@@ -464,3 +491,4 @@ http://raywenderlich.com
 Effective Objective C
 Learn Cocoa Touch for iOS
 Beginning iOS Game Development
+Alfred
