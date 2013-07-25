@@ -16,6 +16,9 @@
     self = [super init];
     
     if(self){
+        // Linha Destaque
+        self.linhaDestaque = -1;
+        
         // Título da barra
         self.navigationItem.title = @"Contatos";
         
@@ -40,6 +43,24 @@
 }
 #pragma mark -
 #pragma mark Ciclo de Vida
+- (void) viewDidAppear:(BOOL)animated{
+    if(self.linhaDestaque != -1){
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.linhaDestaque inSection:0];
+        
+        [self.tableView
+            selectRowAtIndexPath:indexPath
+            animated:YES
+             scrollPosition:UITableViewScrollPositionNone];
+        
+        [self.tableView
+            scrollToRowAtIndexPath:indexPath
+            atScrollPosition:UITableViewScrollPositionNone
+            animated:YES];
+        
+        self.linhaDestaque = -1;
+    }
+}
+
 - (void) viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
 }
@@ -85,6 +106,25 @@
     }
 }
 
+
+#pragma mark -
+#pragma mark Protocolo <ListaContatosProtocol>
+
+- (void) contatoAdicionado:(AAAContato *)contato{
+    NSLog(@"contatoAdicionado");
+    [self.contatos addObject:contato];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    // Pintar linha
+    self.linhaDestaque = [self.contatos indexOfObject:contato];
+}
+
+- (void) contatoAtualizado:(AAAContato *)contato{
+    NSLog(@"contatoAtualizado");
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    self.linhaDestaque = [self.contatos indexOfObject:contato];
+}
+
 #pragma mark -
 #pragma mark Interação com o Formulário
 - (void)exibeFormularioEmBranco{
@@ -103,8 +143,8 @@
         form = [[AAAFormularioContatoViewController alloc] init];
     }
     
-    // Passa contatos para o form
-    form.contatos = self.contatos;
+    // Seta o delegate
+    form.delegate = self;
     
     // Empurra View
     [self.navigationController pushViewController:form animated:YES];

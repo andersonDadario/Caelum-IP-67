@@ -456,6 +456,27 @@ Conceitos
 		callback code
 	}];
 
+	~
+	Projeto >> Summary >> Linked Frameworks and Libraries
+	>> MapKit.framework
+
+	~
+	Barrinha Inferior controla a window
+	UITabBarController
+	tabs.viewControllers = @[nav, mapa];
+
+	|-------|
+	|	|
+	| 	|
+	|	| 
+	|-------|
+	|_1_|_2_|
+
+	~
+	Prefix.pch
+	>> pré compila
+	>> serve para todas as classes
+
 	~ ASLR
 	~ Cookie Web View
 	~ OAuth mobile
@@ -491,4 +512,5 @@ http://raywenderlich.com
 Effective Objective C
 Learn Cocoa Touch for iOS
 Beginning iOS Game Development
-Alfred
+Alfred (melhor que Spotlight)
+App Cartunes

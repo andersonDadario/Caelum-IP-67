@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AAAFormularioContatoViewController.h"
 
-@interface AAAListaContatoViewController : UITableViewController
+@interface AAAListaContatoViewController : UITableViewController<ListaContatosProtocol>
 
 @property (weak, atomic) NSMutableArray *contatos;
+@property NSInteger linhaDestaque;
+
+- (void) contatoAdicionado:(AAAContato *)contato;
+- (void) contatoAtualizado:(AAAContato *)contato;
 
 @end

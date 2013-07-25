@@ -31,13 +31,7 @@
         self.navigationItem.title = @"Cadastro";
         
         // Botao Voltar
-        UIBarButtonItem * btnVoltar = [[UIBarButtonItem alloc]
-                initWithTitle:@"Cancelar"
-                style:(UIBarButtonItemStylePlain)
-                target:self
-                action:@selector(escondeFormulario)
-        ];
-        self.navigationItem.leftBarButtonItem = btnVoltar;
+        self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
     
         // Botao Add
         UIBarButtonItem * btnAdd = [
@@ -70,41 +64,25 @@
         ];
 
         self.navigationItem.rightBarButtonItem = btnConfirmar;
-    }
+}
     
     return self;
 }
 
-- (void)escondeFormulario{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    //[self.navigationController popToViewController:<#(UIViewController *)#> animated:<#(BOOL)#>]
-    //[self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void) atualizaContato{
-    [self pegaDadosFormulario];
-    [self escondeFormulario];
+    if(self.delegate){
+        AAAContato * contato = [self pegaDadosFormulario];
+        [self.delegate contatoAtualizado:contato];
+    }
 }
 
 - (void) criaContato{
     AAAContato * contato = [self pegaDadosFormulario];
 
     // Adicionar na Lista
-    [self.contatos addObject:contato];
-
-    // Gravar no Log
-    NSLog(@"Contato: %@", contato);
-    NSLog(@"Quantidade: %d\nContatos: %@"
-          , [self.contatos count]
-          , self.contatos
-    );
-    
-    for(AAAContato *c in self.contatos){
-        NSLog(@"Iterando: %@", c);
+    if(self.delegate){
+        [self.delegate contatoAdicionado:contato];
     }
-    
-    // Esconde Formulario
-    [self escondeFormulario];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
