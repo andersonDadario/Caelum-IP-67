@@ -498,6 +498,21 @@ Conceitos
 	View tem um attribute "hidden" (igual CSS)
 
 	~
+	Serialização
+	X paginacao
+	X filtros
+	:D flexibilidade
+
+	~
+	O.O VS Relacional
+	Polimorfismo | Stored Procedure
+	Design Pattern | Trigger
+	Herança | Primary Key
+	Método | Integridade Referencial
+	classe | tabela
+	objeto | registro
+
+	Core Data = ORM
 	
 
 	~ ASLR

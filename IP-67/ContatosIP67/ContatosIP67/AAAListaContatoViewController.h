@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
 #import "AAAFormularioContatoViewController.h"
 
-@interface AAAListaContatoViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate>{
+@interface AAAListaContatoViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
     AAAContato *contatoSelecionado;
 }
 
