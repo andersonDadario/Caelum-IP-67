@@ -477,6 +477,29 @@ Conceitos
 	>> pré compila
 	>> serve para todas as classes
 
+	~
+	init 1x
+	viewDidLoad (tem tela 1x)
+	viewDidAppear (every time)
+
+	~
+	Broadcast >> Notification Center
+
+	~
+	@synthesize >> torna o contrato real
+
+	~
+	Delegate
+	>> @selector
+	>> @protocol
+	>> passar callback
+
+	~
+	View tem um attribute "hidden" (igual CSS)
+
+	~
+	
+
 	~ ASLR
 	~ Cookie Web View
 	~ OAuth mobile
@@ -504,7 +527,10 @@ Human Interface Guideline (HIG)
 developer.apple.com
 	/ios
 	/downloads
-Cocopods (like a Maven)
+https://www.cocoacontrols.com
+	> JASidePanels
+	> TPKeyboardAvoid
+Cocoapods (Ruby) (like a Maven)
 Google Group [self SP]
 iOS Table Views
 App Busao SP

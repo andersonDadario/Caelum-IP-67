@@ -6,12 +6,9 @@
 //  Copyright (c) 2013 Dadario. All rights reserved.
 //
 
+#import "TPKeyboardAvoidingScrollView.h"
 #import "AAAContato.h"
 #import "AAAFormularioContatoViewController.h"
-
-@interface AAAFormularioContatoViewController ()
-
-@end
 
 @implementation AAAFormularioContatoViewController
 
@@ -97,6 +94,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Funfando:%@", [TPKeyboardAvoidingScrollView class]);
+    
     // Do any additional setup after loading the view from its nib.
     if(self._contato){
         self.nome.text = self._contato.nome;

@@ -43,6 +43,17 @@
 }
 #pragma mark -
 #pragma mark Ciclo de Vida
+- (void) viewDidLoad{
+    [super viewDidLoad];
+    
+    UILongPressGestureRecognizer *longPress = [
+        [UILongPressGestureRecognizer alloc]
+        initWithTarget:self action:@selector(exibeMaisAcoes:)
+    ];
+    
+    [self.tableView addGestureRecognizer:longPress];
+}
+
 - (void) viewDidAppear:(BOOL)animated{
     if(self.linhaDestaque != -1){
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.linhaDestaque inSection:0];
@@ -67,6 +78,27 @@
 
 #pragma mark -
 #pragma mark Actions da View
+- (void) exibeMaisAcoes:(UIGestureRecognizer *) gesture{
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        // Obter Ponto (X,Y)
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        
+        // Obter IndexPath a partir de um Ponto
+        NSIndexPath * indexPath = [self.tableView indexPathForRowAtPoint:ponto];
+        
+        // Obter Contato a partir de um Index Path
+        AAAContato * contato = [self.contatos objectAtIndex:indexPath.row];
+        
+        // Mensagem p/ Action Sheet
+        UIActionSheet *opcoes = [
+            [UIActionSheet alloc]
+            initWithTitle:contato.nome delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Ligar",@"Enviar Email", @"Visualizar Site", @"Abrir Mapa", nil
+        ];
+        [opcoes showInView:self.view];
+    }
+}
+
+
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self exibeFormulario:indexPath];
 }
@@ -105,7 +137,27 @@
         
     }
 }
+#pragma mark -
+#pragma mark Protocolo <UIActionSheetDelegate>
 
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch(buttonIndex){
+        case 0:
+            //[self ligar];
+            break;
+        case 1:
+            //[self enviarEmail];
+            break;
+        case 2:
+            //[self abrirSite];
+            break;
+        case 3:
+            //[self mostrarMapa];
+            break;
+        default:
+            break;
+    }
+}
 
 #pragma mark -
 #pragma mark Protocolo <ListaContatosProtocol>

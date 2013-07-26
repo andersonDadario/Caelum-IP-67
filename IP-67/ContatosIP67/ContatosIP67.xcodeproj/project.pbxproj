@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0526B98D17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0526B98C17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.m */; };
 		059A2DCB17A0A43F00D18D8F /* AAAMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 059A2DC917A0A43F00D18D8F /* AAAMapaViewController.m */; };
 		059A2DCC17A0A43F00D18D8F /* AAAMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059A2DCA17A0A43F00D18D8F /* AAAMapaViewController.xib */; };
 		059A2DCE17A0A54A00D18D8F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059A2DCD17A0A54A00D18D8F /* MapKit.framework */; };
@@ -32,10 +33,13 @@
 		05DC1D59179753AB0077DDCF /* AAAFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DC1D57179753AB0077DDCF /* AAAFormularioContatoViewController.xib */; };
 		05DF2856179F625C0009CB46 /* NSString+Marota.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF2855179F625C0009CB46 /* NSString+Marota.m */; };
 		05DF2859179F650D0009CB46 /* UIViewController+comBarrinha.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */; };
+		05E4125E17A1DABB004A7D08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E4125D17A1DABB004A7D08 /* CoreLocation.framework */; };
 		05E4CB481798AB9500BA53A7 /* AAAListaContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0526B98B17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = ../TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		0526B98C17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = ../TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		059A2DC817A0A43F00D18D8F /* AAAMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAMapaViewController.h; sourceTree = "<group>"; };
 		059A2DC917A0A43F00D18D8F /* AAAMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAMapaViewController.m; sourceTree = "<group>"; };
 		059A2DCA17A0A43F00D18D8F /* AAAMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAAMapaViewController.xib; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 		05DF2855179F625C0009CB46 /* NSString+Marota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Marota.m"; sourceTree = "<group>"; };
 		05DF2857179F650D0009CB46 /* UIViewController+comBarrinha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+comBarrinha.h"; sourceTree = "<group>"; };
 		05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+comBarrinha.m"; sourceTree = "<group>"; };
+		05E4125D17A1DABB004A7D08 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		05E4CB461798AB9500BA53A7 /* AAAListaContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAListaContatoViewController.h; sourceTree = "<group>"; };
 		05E4CB471798AB9500BA53A7 /* AAAListaContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAListaContatoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E4125E17A1DABB004A7D08 /* CoreLocation.framework in Frameworks */,
 				059A2DCE17A0A54A00D18D8F /* MapKit.framework in Frameworks */,
 				05DC1D381797537F0077DDCF /* UIKit.framework in Frameworks */,
 				05DC1D3A1797537F0077DDCF /* Foundation.framework in Frameworks */,
@@ -117,6 +123,7 @@
 		05DC1D2B1797537F0077DDCF = {
 			isa = PBXGroup;
 			children = (
+				05E4125D17A1DABB004A7D08 /* CoreLocation.framework */,
 				059A2DCD17A0A54A00D18D8F /* MapKit.framework */,
 				05DC1D3D1797537F0077DDCF /* ContatosIP67 */,
 				05DC1D361797537F0077DDCF /* Frameworks */,
@@ -158,6 +165,8 @@
 		05DC1D3E1797537F0077DDCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0526B98B17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.h */,
+				0526B98C17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.m */,
 				05DF2857179F650D0009CB46 /* UIViewController+comBarrinha.h */,
 				05DF2858179F650D0009CB46 /* UIViewController+comBarrinha.m */,
 				05DF2854179F625C0009CB46 /* NSString+Marota.h */,
@@ -272,6 +281,7 @@
 				05DF2856179F625C0009CB46 /* NSString+Marota.m in Sources */,
 				05DF2859179F650D0009CB46 /* UIViewController+comBarrinha.m in Sources */,
 				059A2DCB17A0A43F00D18D8F /* AAAMapaViewController.m in Sources */,
+				0526B98D17A0BDA700DE187A /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
