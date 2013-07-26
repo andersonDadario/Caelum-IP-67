@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "AAAFormularioContatoViewController.h"
 
-@interface AAAListaContatoViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate>
+@interface AAAListaContatoViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate>{
+    AAAContato *contatoSelecionado;
+}
 
 @property (weak, atomic) NSMutableArray *contatos;
 @property NSInteger linhaDestaque;

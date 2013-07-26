@@ -88,6 +88,7 @@
         
         // Obter Contato a partir de um Index Path
         AAAContato * contato = [self.contatos objectAtIndex:indexPath.row];
+        contatoSelecionado = contato;
         
         // Mensagem p/ Action Sheet
         UIActionSheet *opcoes = [
@@ -138,25 +139,66 @@
     }
 }
 #pragma mark -
+#pragma mark ActionSheetDelegate
+- (void) abrirAplicativoComURL:(NSString *)url{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
+
+- (void) ligar{
+    UIDevice *device = [UIDevice currentDevice];
+    
+    // Tenta fazer ligacao
+    if([device.model isEqualToString:@"iPhone"]){
+        NSString *numero = [NSString stringWithFormat:@"tel%@",contatoSelecionado.telefone];
+        [self abrirAplicativoComURL:numero];
+    } else {
+        [[[UIAlertView alloc]
+          initWithTitle:@"Impossível fazer ligação"
+          message:@"Seu dispositivo não é um iPhone"
+          delegate:nil
+          cancelButtonTitle:@"Ok"
+          otherButtonTitles:nil] show];
+    }
+}
+
+- (void) enviarEmail{
+    
+}
+
+- (void) abrirSite{
+    NSString *url = contatoSelecionado.site;
+    [self abrirAplicativoComURL:url];
+}
+
+- (void) mostrarMapa{
+    NSString *url = [
+        [NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", contatoSelecionado.endereco]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [self abrirAplicativoComURL:url];
+}
+
+#pragma mark -
 #pragma mark Protocolo <UIActionSheetDelegate>
 
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch(buttonIndex){
         case 0:
-            //[self ligar];
+            [self ligar];
             break;
         case 1:
-            //[self enviarEmail];
+            [self enviarEmail];
             break;
         case 2:
-            //[self abrirSite];
+            [self abrirSite];
             break;
         case 3:
-            //[self mostrarMapa];
+            [self mostrarMapa];
             break;
         default:
             break;
     }
+    
+    contatoSelecionado = nil;
 }
 
 #pragma mark -
