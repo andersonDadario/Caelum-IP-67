@@ -22,6 +22,7 @@
 		055BDB9617A335480056E773 /* AAADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055BDB9517A335480056E773 /* AAADetailViewController.m */; };
 		055BDB9917A335480056E773 /* AAAMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055BDB9717A335480056E773 /* AAAMasterViewController.xib */; };
 		055BDB9C17A335480056E773 /* AAADetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055BDB9A17A335480056E773 /* AAADetailViewController.xib */; };
+		055BDBA417A339B60056E773 /* Produto.m in Sources */ = {isa = PBXBuildFile; fileRef = 055BDBA317A339B60056E773 /* Produto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		055BDB9517A335480056E773 /* AAADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAADetailViewController.m; sourceTree = "<group>"; };
 		055BDB9817A335480056E773 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AAAMasterViewController.xib; sourceTree = "<group>"; };
 		055BDB9B17A335480056E773 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AAADetailViewController.xib; sourceTree = "<group>"; };
+		055BDBA217A339B60056E773 /* Produto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Produto.h; sourceTree = "<group>"; };
+		055BDBA317A339B60056E773 /* Produto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Produto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				055BDB9717A335480056E773 /* AAAMasterViewController.xib */,
 				055BDB9A17A335480056E773 /* AAADetailViewController.xib */,
 				055BDB8E17A335480056E773 /* Learning_Core_Data.xcdatamodeld */,
+				055BDBA217A339B60056E773 /* Produto.h */,
+				055BDBA317A339B60056E773 /* Produto.m */,
 				055BDB7D17A335480056E773 /* Supporting Files */,
 			);
 			path = "Learning Core Data";
@@ -195,6 +200,7 @@
 				055BDB9017A335480056E773 /* Learning_Core_Data.xcdatamodeld in Sources */,
 				055BDB9317A335480056E773 /* AAAMasterViewController.m in Sources */,
 				055BDB9617A335480056E773 /* AAADetailViewController.m in Sources */,
+				055BDBA417A339B60056E773 /* Produto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +331,7 @@
 				055BDBA117A335480056E773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

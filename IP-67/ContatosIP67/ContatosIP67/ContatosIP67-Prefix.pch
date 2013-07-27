@@ -11,4 +11,28 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
 #endif
+
+
+// Erich
+#import "AAAAppDelegate.h"
+
+@interface UIViewController (WithContextAcess)
+    -(NSManagedObjectContext*) context;
+    -(void) saveManagedContext;
+@end
+
+@implementation UIViewController (WithContextAcess)
+    -(NSManagedObjectContext*) context {
+        AAAAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+        return [delegate managedObjectContext];
+    }
+
+    -(void) saveManagedContext {
+        AAAAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+        [delegate saveContext];
+    }
+@end

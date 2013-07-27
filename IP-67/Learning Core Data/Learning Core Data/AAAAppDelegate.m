@@ -18,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSManagedObjectContext *cdx = [self managedObjectContext];
+    Produto * p = (Produto*)[NSEntityDescription insertNewObjectForEntityForName:@"Produto" inManagedObjectContext:cdx];
+    
+    // forçar salvar
+    [self saveContext];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 

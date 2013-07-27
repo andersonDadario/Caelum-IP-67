@@ -67,8 +67,9 @@
 }
 
 - (void) atualizaContato{
+    AAAContato * contato = [self pegaDadosFormulario];
+    
     if(self.delegate){
-        AAAContato * contato = [self pegaDadosFormulario];
         [self.delegate contatoAtualizado:contato];
     }
 }
@@ -129,20 +130,15 @@
 }
 
 - (AAAContato*)pegaDadosFormulario {
-    AAAContato * contato = nil;
-    
-    if(self._contato){
-        contato = self._contato;
-    } else {
-        contato = [[AAAContato alloc] init];
+    if(!self._contato){
+        self._contato = [AAAContato contatoInManagedObjectContext:self.context];
     }
-    
-    contato.nome = self.nome.text;
-    contato.telefone = self.telefone.text;
-    contato.email = self.email.text;
-    contato.endereco = self.endereco.text;
-    contato.site = self.endereco.text;
-    
-    return contato;
+
+    self._contato.nome = self.nome.text;
+    self._contato.telefone = self.telefone.text;
+    self._contato.email = self.email.text;
+    self._contato.endereco = self.endereco.text;
+    self._contato.site = self.endereco.text;
+    return self._contato;
 }
 @end

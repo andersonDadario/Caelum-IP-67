@@ -513,7 +513,24 @@ Conceitos
 	objeto | registro
 
 	Core Data = ORM
+	Objeto -> Core Data -> (Banco, XML, etc)
+	{ modelagem }  --> NSObjectModel --> NSPersistenceStoreCoordinator
+	Contexto de persistência (berço) --> NSManagedObjectContext
+	Arquivo chmodel
+	Dados salvos assim que a aplicação for terminada
+	File -> new file -> file … --> Data Model
+	Imagem (NSCoding) --> Transformable
+	>>> persistence store coord
+	>>> managed obj context
+	>>> managed obj model
+	>>> applicationDocumentsDirectory
+	>>> applicationWillTermination
+	>>> save context
+		>>> .pch
+		>>> CoreData.framework
 	
+
+
 
 	~ ASLR
 	~ Cookie Web View
@@ -537,6 +554,8 @@ Atalhos
 
 	SHIFT+COMMAND+O Buscar Classes
 	ESC ou Ctrl + Espaço
+
+	COMMAND ~ troca xcode
 ----------------------------------------------
 Human Interface Guideline (HIG)
 developer.apple.com
@@ -555,3 +574,8 @@ Learn Cocoa Touch for iOS
 Beginning iOS Game Development
 Alfred (melhor que Spotlight)
 App Cartunes
+http://pastie.org/8179453
+	~
+	Games
+	>> Corona
+	>> Cococa2d
